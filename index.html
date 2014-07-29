@@ -1,0 +1,25 @@
+<html ng-app="manApp" ng-controller="manCtrl">
+	<head>
+		<title>MANterest</title>
+	
+	
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.17/angular.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="script.js"></script>
+	</head>
+	<body>
+		<img src="manBanner.jpg" id="title">
+
+ 			<div class="tile" ng-repeat="man in men">
+
+				<div class="manTag">{{ man.tag }}</div>
+				<div class="manImage">
+					<img src="{{ man.image }}">
+				</div>	
+				<div class="man-description"></div>
+			
+			</div>
+
+
+	</body>
+</html>
