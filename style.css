@@ -1,25 +1,26 @@
 html {
-	background-image: url(http://www.mightybackgrounds.com/wp-content/uploads/2013/03/Free-Wood-Texture-33.jpg);
-	-webkit-background-size: cover;
+  background-image: url(http://static.squarespace.com/static/5303f87ce4b07f58efd81fa9/t/53044b98e4b0c2312596a996/1392790424274/backgrounds-wood-texture--1549499-1024x872.jpg);
+  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-	font-family: UglyQua;
+  font-family: UglyQua;
 }
+
 #title {
-	
+	width: 100%;
 	margin-right: 0px;
-	margin-left: 20px;
+	margin-left: 0px;
 	border-radius: 15px;
 
 }
-/*}*/
-/*img {
+
+#manPic {
   height: 250px;
   width: auto;
   overflow: hidden;
   border-radius: 5px;
-}*/
+}
 
 .tile {
   display: inline-block;
@@ -28,14 +29,15 @@ html {
   width: 250px;
   height: 250px;
   margin-right: 10px;
+  margin-left: 10px; 
   opacity: 100%;
-  border-radius: 15px
+  border-radius: 15px;
 }
 .tile:hover {
   border: 2px solid orange;
 }
 
-.tile:active{
+.tile:active {
   border: 2px solid #336699;
 }
 
@@ -44,11 +46,16 @@ html {
   font-size: 1.25em;
 }
 
-.manImage{
+.manImage {
   text-align: center;
-  border-radius: 15px;
+  border-radius: 20px;
 }
 
-.man-description {
+.manUrl {
   text-align: center;
 }
+
+
+
+
+
