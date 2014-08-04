@@ -10,30 +10,42 @@
 	<!-- AngularFire -->
 	<script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
 	<!-- My Custom Links -->
+	
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript" src="script.js"></script>
+	
+	
 		
 		
 
  </head>
  <body>
-	<img src="manBanner.jpg" id="title">
-	<form ng-submit="addMan(newManTag, newManImage, newManUrl)">
-    <input ng-model="newManTag" placeholder="Title" />
-    <input ng-model="newManImage" placeholder="Image Url" />
-    <input ng-model="newManUrl" placeholder="url" />
-  <button type="submit">Be A Man!</button>  
-  </form> 
-		
-		<a class="manUrl" ng-href="{{ man.url }}">
- 		  <div class="tile" ng-repeat="tile in tiles | filter:searchText">
-			 <div class="manTag">{{ man.tag }}</div>
-		     <div class="manImage">
-				<img id="manPic" ng-src="{{ man.image }}">
-		     </div>	
-		  </div>
-		</a>
 
+	<img src="manBanner.jpg" id="title">
+	
+	<!-- This is the add form -->
+ 
+
+	<form ng-submit="addMan(newManTag, newManImage, newManUrl)">
+     <input class="addButt" ng-model="newManTag" placeholder="Title" />
+     <input class="addButt" ng-model="newManImage" placeholder="Image Url" />
+     <input class="addButt" ng-model="newManUrl" placeholder="url" />
+     <button type="submit">Be A Man!</button>  
+    </form> 
+		<!-- This is the display tile -->
+		<div class="tile" ng-repeat="man in men| filter:searchText">
+			<button ng-click="men.$remove(man)" id="removeBut">X</button>
+			<a class="manUrl" ng-href="{{ man.url }}">
+			 <div class="manImage">
+				<img id="manPic" ng-src="{{ man.image }}">
+		     </div>
+		     <div class="manTag">{{ man.tag }}</div>
+		     	
+		  	</a>
+		</div>
+	<div style="visibility:hidden; posistion:fixed;">
+	<iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/55633839&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe></div>
+    
 
 
  </body>
